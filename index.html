@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অং চিং | বিদেশে কাজ, পড়াশোনা ও ট্রাভেল সার্ভিস</title>
+  <meta name="description" content="ট্যুরিস্ট ভিসা, হোটেল বুকিং, এয়ার টিকেট, ভিসা কনসালট্যান্ট — অং চিং। সার্ভিস চার্জ মাত্র ১ লাখ — ভিসা পাওয়ার পর।">
+  <meta property="og:title" content="ট্যুরিস্ট ভিসা, হোটেল বুকিং, এয়ার টিকেট — অং চিং">
+  <meta property="og:description" content="সব ট্রাভেল সার্ভিস এক জায়গায়। সার্ভিস চার্জ ১ লাখ ফিক্সড — ভিসা পাওয়ার পর।">
+  <meta property="og:type" content="profile">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* ============================================================
+       RESET & VARIABLES
+    ============================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0b1e33;
+      --navy-light: #1a3b5e;
+      --amber: #f5b342;
+      --green: #25D366;
+      --green-dark: #1ebe5a;
+      --green-soft: #f0fff4;
+      --green-border: #b7ebc9;
+      --green-text: #0f8a4d;
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #6b7a8c;
+      --border: #e2ebf5;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.04);
+      --shadow-md: 0 10px 25px -8px rgba(0, 40, 80, 0.12);
+      --shadow-lg: 0 20px 40px -15px rgba(0, 40, 80, 0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .sc-value, .cost-box, .advance-box, .service-note-small,
+    .section-title, .hero-stat strong, .stat-num, .step-num {
+      font-variant-numeric: normal;
+      font-feature-settings: "tnum" off;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ============================================================
+       SHARED COMPONENTS
+    ============================================================ */
+    section { padding: 70px 0; }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+    .section-title i { color: var(--amber); margin-right: 8px; }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: white;
+      padding: 70px 20px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 25%, rgba(245, 179, 66, 0.12), transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(37, 211, 102, 0.1), transparent 45%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+    .hero-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(245, 179, 66, 0.25), rgba(37, 211, 102, 0.15));
+      border: 4px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4.5rem;
+      color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .hero-info { text-align: left; }
+
+    .hero-tagline {
+      display: inline-block;
+      background: rgba(245, 179, 66, 0.15);
+      border: 1px solid rgba(245, 179, 66, 0.35);
+      color: var(--amber);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 .highlight-text {
+      background: linear-gradient(90deg, #ffd966, var(--amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 22px;
+      line-height: 1.7;
+      max-width: 580px;
+    }
+    .hero-desc strong { color: var(--amber); }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .hero-stat {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      backdrop-filter: blur(6px);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .hero-stat i { color: var(--amber); font-size: 0.9rem; }
+    .hero-stat strong { color: white; font-weight: 700; }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--green);
+      color: white;
+      font-size: 1.08rem;
+      font-weight: 600;
+      padding: 15px 34px;
+      border-radius: 60px;
+      text-decoration: none;
+      box-shadow: 0 12px 28px -6px rgba(37, 211, 102, 0.5);
+      transition: all 0.25s ease;
+      border: 2px solid rgba(255,255,255,0.15);
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .hero-cta:hover {
+      background: var(--green-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 18px 35px -8px rgba(37, 211, 102, 0.6);
+    }
+    .hero-cta i { font-size: 1.35rem; }
+
+    /* ============================================================
+       SERVICES (VISA + EXTRA)
+    ============================================================ */
+    .services-section { background: var(--bg); }
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 24px 22px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy), var(--amber));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .card-header h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.3px;
+    }
+    .badge {
+      background: #e6f0ff;
+      color: #1a4b8c;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 12px;
+      border: 1px solid #cbdff5;
+      align-self: flex-start;
+    }
+    .card ul { list-style: none; flex-grow: 1; margin-bottom: 8px; }
+    .card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.92rem;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .card li i {
+      color: #1e6f9f;
+      font-size: 0.95rem;
+      margin-top: 4px;
+      min-width: 16px;
+    }
+    .card li i.fa-check-circle { color: var(--green-text); }
+    .card li i.fa-clock { color: #d97706; }
+    .card li i.fa-plane { color: #2563eb; }
+
+    .cost-box {
+      background: var(--green-soft);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--green-text);
+      border-left: 4px solid var(--green-text);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cost-box i { font-size: 1.1rem; }
+
+    .advance-box {
+      background: #e6f0ff;
+      padding: 9px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: #1a4b8c;
+      border-left: 4px solid #2563eb;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .advance-box i { font-size: 1rem; color: #2563eb; }
+
+    .service-note-small {
+      background: var(--green-soft);
+      border: 1px dashed var(--green-border);
+      padding: 7px 12px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--green-text);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .service-note-small i { font-size: 0.85rem; }
+
+    .highlight-box {
+      background: #fff7e6;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 0.87rem;
+      color: #7a4b0e;
+      border-left: 4px solid var(--amber);
+      margin-bottom: 8px;
+    }
+    .highlight-box i { color: #b86b00; margin-right: 5px; }
+
+    /* Extra services */
+    .extra-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+    .extra-card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px 22px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .extra-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy), var(--amber));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .extra-card:hover::before { opacity: 1; }
+    .extra-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--amber);
+    }
+    .extra-icon {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 14px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      box-shadow: 0 10px 22px -8px rgba(11, 30, 51, 0.3);
+    }
+    .extra-icon.visa { background: linear-gradient(135deg, #2563eb, #1a4b8c); }
+    .extra-icon.hotel { background: linear-gradient(135deg, #d97706, #b45309); }
+    .extra-icon.air { background: linear-gradient(135deg, #0f8a4d, #0b6b3a); }
+    .extra-icon.tour { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+
+    .extra-card h4 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .extra-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+    .extra-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .extra-status.available {
+      background: var(--green-soft);
+      color: var(--green-text);
+      border: 1px solid var(--green-border);
+    }
+    .extra-status.available i { color: var(--green-text); font-size: 0.75rem; }
+    .extra-status.soon {
+      background: #fff4e0;
+      color: #b45309;
+      border: 1px solid #f5d99b;
+    }
+    .extra-status.soon i { color: #d97706; font-size: 0.75rem; }
+
+    /* Sub-section divider inside services */
+    .sub-section-label {
+      text-align: center;
+      margin: 55px auto 30px;
+      position: relative;
+      max-width: 300px;
+    }
+    .sub-section-label span {
+      background: var(--bg);
+      padding: 0 20px;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 1.05rem;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+    }
+    .sub-section-label::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      transform: translateY(-50%);
+    }
+
+    /* ============================================================
+       SERVICE CHARGE
+    ============================================================ */
+    .service-charge-section {
+      background: linear-gradient(180deg, #ffffff 0%, var(--green-soft) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .service-charge-box {
+      max-width: 780px;
+      margin: 0 auto;
+      background: white;
+      border: 2px solid var(--green-border);
+      border-radius: 24px;
+      padding: 30px 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 26px;
+      align-items: center;
+      box-shadow: 0 20px 45px -20px rgba(15, 138, 77, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-charge-box::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green-text), var(--green), var(--green-text));
+    }
+    .sc-icon {
+      width: 82px;
+      height: 82px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--green-text), var(--green));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 12px 25px -8px rgba(15, 138, 77, 0.5);
+      flex-shrink: 0;
+    }
+    .sc-amount {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .sc-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+    .sc-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--green-text);
+      line-height: 1;
+    }
+    .sc-desc {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .sc-desc strong { color: var(--green-text); }
+    .sc-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .sc-points span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-soft);
+      border: 1px solid var(--green-border);
+      padding: 5px 13px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green-text);
+    }
+    .sc-points span i { font-size: 0.75rem; }
+
+    /* ============ NO BARGAIN ============ */
+    .nobargain-box {
+      max-width: 880px;
+      margin: 30px auto 0;
+      background: linear-gradient(135deg, #fff7e6, #fff4e0);
+      border: 1.5px solid #f5d99b;
+      border-radius: 24px;
+      padding: 30px 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px -20px rgba(245, 179, 66, 0.4);
+    }
+    .nobargain-box::before {
+      content: "";
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 179, 66, 0.2), transparent 70%);
+    }
+    .nobargain-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .nobargain-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #d97706, #b45309);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      box-shadow: 0 8px 18px -6px rgba(180, 83, 9, 0.5);
+    }
+    .nobargain-header h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #7a4b0e;
+      line-height: 1.35;
+      margin: 0;
+    }
+    .nobargain-text {
+      font-size: 0.98rem;
+      color: #664a1a;
+      line-height: 1.75;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .nobargain-text strong {
+      color: #b45309;
+      background: #fff4e0;
+      padding: 1px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .nobargain-reasons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .nobargain-reason {
+      background: white;
+      border: 1px solid #f5d99b;
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .nobargain-reason:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px -8px rgba(180, 83, 9, 0.25);
+      border-color: #d97706;
+    }
+    .nobargain-reason i {
+      color: #d97706;
+      font-size: 1.1rem;
+      margin-top: 3px;
+      min-width: 20px;
+      text-align: center;
+    }
+    .nobargain-reason span {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.55;
+    }
+    .nobargain-reason span strong {
+      color: #7a4b0e;
+      display: block;
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+      background: none;
+      padding: 0;
+    }
+    .nobargain-quote {
+      background: white;
+      border-left: 4px solid #d97706;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-style: italic;
+      color: #7a4b0e;
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    .nobargain-quote i {
+      color: #d97706;
+      font-size: 1rem;
+      margin-right: 6px;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    .about-section { background: white; }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: #334155;
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+    .about-text p strong { color: var(--navy); }
+    .about-highlight {
+      background: linear-gradient(135deg, #fff7e6, #fff4e0);
+      padding: 18px 22px;
+      border-radius: 16px;
+      border-left: 4px solid var(--amber);
+      margin-top: 18px;
+    }
+    .about-highlight p {
+      margin: 0;
+      font-style: italic;
+      color: #7a4b0e;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .about-points {
+      background: #f9fcff;
+      border-radius: 20px;
+      padding: 24px 22px;
+      border: 1px solid var(--border);
+    }
+    .about-points h4 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .about-points ul { list-style: none; }
+    .about-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .about-points li:last-child { margin-bottom: 0; }
+    .about-points li i {
+      color: var(--green-text);
+      font-size: 1rem;
+      margin-top: 4px;
+      min-width: 16px;
+    }
+
+    /* ============================================================
+       PROCESS STEPS
+    ============================================================ */
+    .process-section { background: var(--bg); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .step {
+      text-align: center;
+      padding: 24px 14px;
+      background: white;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      transition: all 0.25s;
+    }
+    .step:hover {
+      transform: translateY(-4px);
+      border-color: var(--amber);
+      box-shadow: 0 12px 24px -8px rgba(245, 179, 66, 0.25);
+    }
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0 auto 12px;
+      box-shadow: 0 6px 14px -4px rgba(11, 30, 51, 0.4);
+    }
+    .step h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+    .step p { font-size: 0.82rem; color: var(--muted); }
+
+    /* ============================================================
+       WORK PROCESS
+    ============================================================ */
+    .work-process-section {
+      background: white;
+      border-top: 1px solid var(--border);
+    }
+    .work-process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .wp-card {
+      background: #f9fcff;
+      border-radius: 16px;
+      padding: 20px 18px;
+      border: 1px solid var(--border);
+      position: relative;
+      transition: all 0.25s;
+      overflow: hidden;
+    }
+    .wp-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--amber), var(--green));
+    }
+    .wp-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--amber);
+      box-shadow: var(--shadow-md);
+    }
+    .wp-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--green-soft);
+      color: var(--green-text);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+      border: 1px solid var(--green-border);
+    }
+    .wp-step-badge i { color: var(--green-text); font-size: 0.65rem; }
+    .wp-card h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .wp-card h4 i { color: var(--amber); font-size: 1rem; }
+    .wp-card p {
+      font-size: 0.85rem;
+      color: #475569;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+    .wp-channel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .wp-channel-tag .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+    .wp-channel-tag .dot.all { background: linear-gradient(90deg, #25D366, #1877F2, #FF0000, #E1306C); }
+
+    /* ============================================================
+       REVIEWS
+    ============================================================ */
+    .testimonial-section { background: var(--bg); }
+
+    .review-coming-soon {
+      background: linear-gradient(135deg, #ffffff, #f9fcff);
+      border: 2px dashed #cbdff5;
+      border-radius: 24px;
+      padding: 40px 30px;
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s;
+    }
+    .review-coming-soon:hover {
+      border-color: var(--amber);
+      box-shadow: 0 20px 45px -20px rgba(245, 179, 66, 0.3);
+    }
+    .review-coming-soon::before {
+      content: "";
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 179, 66, 0.12), transparent 70%);
+    }
+    .rcs-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #fff4e0, #ffeccc);
+      color: #b45309;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 18px;
+      border: 2px solid #f5d99b;
+      position: relative;
+    }
+    .review-coming-soon h3 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .review-coming-soon p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 22px;
+    }
+    .review-coming-soon p strong { color: var(--navy); }
+
+    .btn-give-review {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: 60px;
+      text-decoration: none;
+      box-shadow: 0 12px 28px -6px rgba(11, 30, 51, 0.35);
+      transition: all 0.25s;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .btn-give-review:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 35px -8px rgba(11, 30, 51, 0.5);
+      background: linear-gradient(135deg, var(--navy-light), #2563eb);
+    }
+    .btn-give-review i { font-size: 1.15rem; color: var(--amber); }
+
+    .rcs-note {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .rcs-note i { color: var(--amber); margin-right: 4px; }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+    .testimonial {
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      transition: all 0.25s;
+      position: relative;
+    }
+    .testimonial.verified::after {
+      content: "Verified";
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--green-soft);
+      color: var(--green-text);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      border: 1px solid var(--green-border);
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+    .testimonial:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .testimonial .quote-icon {
+      font-size: 1.8rem;
+      color: var(--amber);
+      opacity: 0.4;
+      margin-bottom: 6px;
+    }
+    .testimonial p {
+      font-size: 0.92rem;
+      color: #334155;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .author-info strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--navy);
+    }
+    .author-info small { color: var(--muted); font-size: 0.8rem; }
+    .stars { color: var(--amber); font-size: 0.82rem; margin-top: 2px; }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq-section { background: white; }
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item {
+      background: white;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .faq-item.active {
+      border-color: var(--amber);
+      box-shadow: 0 8px 20px -8px rgba(245, 179, 66, 0.3);
+    }
+    .faq-question {
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+    .faq-question i {
+      color: var(--amber);
+      transition: transform 0.3s;
+      font-size: 1rem;
+      min-width: 18px;
+      text-align: center;
+    }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s;
+      padding: 0 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 600px;
+      padding: 0 20px 18px;
+    }
+    .faq-answer strong { color: var(--navy); }
+
+    /* ============================================================
+       LEAD FORM
+    ============================================================ */
+    .form-section {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: white;
+      padding: 70px 20px;
+    }
+    .form-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 32px 28px;
+      backdrop-filter: blur(8px);
+    }
+    .form-card h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+    .form-card h3 i { color: var(--amber); margin-right: 8px; }
+    .form-card p.form-sub {
+      text-align: center;
+      opacity: 0.85;
+      margin-bottom: 24px;
+      font-size: 0.92rem;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 11px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      font-family: inherit;
+      font-size: 0.92rem;
+      transition: all 0.2s;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255, 255, 255, 0.5); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--amber);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 0 3px rgba(245, 179, 66, 0.2);
+    }
+    .form-group select option { color: var(--navy); background: white; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s;
+      box-shadow: 0 10px 24px -6px rgba(37, 211, 102, 0.5);
+      margin-top: 6px;
+    }
+    .form-submit:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -8px rgba(37, 211, 102, 0.6);
+    }
+    .form-submit i { font-size: 1.15rem; }
+
+    /* ============================================================
+       DISCLAIMER & FOOTER
+    ============================================================ */
+    .disclaimer-wrapper { background: white; }
+    .disclaimer {
+      background: #fef7e9;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin: 0 auto;
+      max-width: 1000px;
+      border-left: 5px solid #f39c12;
+      font-size: 0.86rem;
+      line-height: 1.7;
+      color: #3e4a5b;
+      box-shadow: var(--shadow-sm);
+    }
+    .disclaimer i {
+      color: #e67e22;
+      margin-right: 6px;
+      font-size: 1.05rem;
+    }
+    .disclaimer strong { color: #b45f06; }
+
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.85rem;
+    }
+    footer .footer-contact { margin-bottom: 8px; }
+    footer .footer-contact i { color: var(--amber); margin-right: 6px; }
+
+    /* ============================================================
+       FLOATING WHATSAPP
+    ============================================================ */
+    .floating-wa {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 58px;
+      height: 58px;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.85rem;
+      box-shadow: 0 12px 28px -4px rgba(37, 211, 102, 0.6);
+      z-index: 999;
+      text-decoration: none;
+      transition: all 0.25s;
+      animation: waPulse 2s infinite;
+    }
+    .floating-wa:hover {
+      background: var(--green-dark);
+      transform: scale(1.1);
+    }
+    @keyframes waPulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ============================================================
+       TOAST
+    ============================================================ */
+    .toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-120px);
+      background: var(--green);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 50px;
+      font-weight: 500;
+      box-shadow: 0 12px 28px -6px rgba(37, 211, 102, 0.5);
+      z-index: 2000;
+      transition: transform 0.4s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; text-align: center; gap: 26px; }
+      .hero-info { text-align: center; }
+      .hero-photo { width: 180px; height: 180px; font-size: 3.6rem; margin: 0 auto; }
+      .hero-stats { justify-content: center; }
+      .about-content { grid-template-columns: 1fr; gap: 26px; }
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 45px 0; }
+      .hero { padding: 45px 16px 40px; }
+      .hero-photo { width: 150px; height: 150px; font-size: 3rem; }
+      .hero h1 { font-size: 1.5rem; }
+      .hero-desc { font-size: 0.92rem; }
+      .hero-cta { padding: 13px 24px; font-size: 0.95rem; width: 100%; justify-content: center; }
+      .hero-stat { font-size: 0.78rem; padding: 6px 12px; }
+
+      .service-charge-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 16px;
+      }
+      .sc-icon { margin: 0 auto; width: 70px; height: 70px; font-size: 1.9rem; }
+      .sc-amount { justify-content: center; }
+      .sc-value { font-size: 1.7rem; }
+      .sc-points { justify-content: center; }
+
+      .nobargain-box { padding: 24px 20px; margin-top: 20px; }
+      .nobargain-header { flex-direction: column; text-align: center; gap: 10px; }
+      .nobargain-header h3 { font-size: 1.05rem; }
+      .nobargain-reasons { grid-template-columns: 1fr; }
+
+      .card { padding: 20px 18px; }
+      .card-header h3 { font-size: 1.22rem; }
+      .form-card { padding: 24px 20px; }
+      .work-process-grid { grid-template-columns: 1fr; }
+      .review-coming-soon { padding: 32px 20px; }
+      .review-coming-soon h3 { font-size: 1.15rem; }
+      .btn-give-review { width: 100%; justify-content: center; }
+      .floating-wa { width: 52px; height: 52px; font-size: 1.6rem; bottom: 16px; right: 16px; }
+      .disclaimer { margin: 30px 16px; padding: 16px; font-size: 0.82rem; }
+      .faq-question { padding: 14px 18px; font-size: 0.92rem; }
+      .faq-answer { padding: 0 18px; }
+      .faq-item.active .faq-answer { padding: 0 18px 16px; }
+
+      .extra-services-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .hero-stats { flex-direction: column; align-items: center; }
+      .hero-stat { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       ১. HERO — পরিচয়
+  ============================================================ -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-photo">
+        <img src="aung-ching.jpg" alt="অং চিং">
+        
+      </div>
+      <div class="hero-info">
+        <span class="hero-tagline">ভিসা কনসালট্যান্ট ও ট্রাভেল সার্ভিস</span>
+        <h1>আমি <span class="highlight-text">অং চিং</span><br>আছি আপনার পাশে</h1>
+        <p class="hero-desc">
+          <strong>৪ মাস যাবত এই টপিক নিয়ে কাজ করছি</strong> — ট্যুরিস্ট ভিসা, হোটেল বুকিং, এয়ার টিকেট সহ সব ধরনের ট্রাভেল সার্ভিস ও বিদেশে কাজ-পড়াশোনার জন্য সঠিক পরামর্শ দিই।
+        </p>
+
+        <div class="hero-stats">
+          <span class="hero-stat"><i class="fas fa-clock"></i> <strong>৪ মাস</strong> অভিজ্ঞতা</span>
+          <span class="hero-stat"><i class="fas fa-globe"></i> <strong>৫+</strong> দেশে সেবা</span>
+          <span class="hero-stat"><i class="fas fa-shield-check"></i> <strong>১০০%</strong> সততা</span>
+        </div>
+
+        <a href="https://wa.me/8801918481232?text=নমস্কার%20অং%20চিং%20দা%2C%20আমার%20সার্ভিস%20দরকার" class="hero-cta" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> সরাসরি যোগাযোগ করুন
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       ২. SERVICES — কী কী সার্ভিস দিই
+  ============================================================ -->
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-briefcase"></i> আমার সার্ভিসসমূহ</h2>
+      <p class="section-subtitle">ভিসা থেকে ট্রাভেল — সব সেবা এক জায়গায়</p>
+
+      <!-- ভিসা সার্ভিস -->
+      <div class="grid-cards">
+
+        <!-- Italy -->
+        <div class="card">
+          <div class="card-header">
+            <h3>ITALY</h3>
+          </div>
+          <div class="badge"><i class="fas fa-star"></i> Sponsor Visa</div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> কিছু পজিশনে Language/Experience ছাড়াই প্রোফাইল বিবেচনা</li>
+            <li><i class="fas fa-clock"></i> প্রসেসিং: <strong>৩–৪ মাস</strong></li>
+            <li><i class="fas fa-plane"></i> Travel: <strong>ডিসেম্বরের মধ্যে</strong></li>
+          </ul>
+          <div class="cost-box"><i class="fas fa-tag"></i> Cost: ২৬ লাখ টাকা</div>
+          <div class="advance-box"><i class="fas fa-hand-holding-usd"></i> Advance: ২ লাখ টাকা</div>
+          <div class="service-note-small"><i class="fas fa-shield-check"></i> সার্ভিস চার্জ: ১ লাখ (ভিসা পাওয়ার পর)</div>
+        </div>
+
+        <!-- Japan Work Visa -->
+        <div class="card">
+          <div class="card-header">
+            <h3>JAPAN — Work Visa</h3>
+          </div>
+          <div class="badge"><i class="fas fa-briefcase"></i> Work Opportunity</div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <strong>Interview Pass → তারপর Payment</strong></li>
+            <li><i class="fas fa-check-circle"></i> বিভিন্ন সেক্টরে সুযোগ</li>
+            <li><i class="fas fa-check-circle"></i> দক্ষ ও আধা-দক্ষ উভয়ের জন্য</li>
+          </ul>
+          <div class="cost-box"><i class="fas fa-tag"></i> Cost: ৬.৫ লাখ টাকা</div>
+          <div class="service-note-small"><i class="fas fa-shield-check"></i> সার্ভিস চার্জ: ১ লাখ (ভিসা পাওয়ার পর)</div>
+          <div class="highlight-box"><i class="fas fa-lightbulb"></i> Advance নেই — ইন্টারভিউ পাসের পর পেমেন্ট</div>
+        </div>
+
+        <!-- Japan Student -->
+        <div class="card">
+          <div class="card-header">
+            <h3>JAPAN — Student</h3>
+          </div>
+          <div class="badge"><i class="fas fa-graduation-cap"></i> Student Visa</div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> জাপানে পড়াশোনার Student Visa প্রসেস চলছে</li>
+            <li><i class="fas fa-check-circle"></i> ভাষা কোর্সসহ সুযোগ</li>
+            <li><i class="fas fa-check-circle"></i> পড়াশোনার পাশাপাশি কাজের সুযোগ</li>
+          </ul>
+          <div class="service-note-small"><i class="fas fa-shield-check"></i> সার্ভিস চার্জ: ১ লাখ (ভিসা পাওয়ার পর)</div>
+          <div class="highlight-box"><i class="fas fa-award"></i> উচ্চশিক্ষা + আয়ের সুযোগ</div>
+        </div>
+
+        <!-- Mongolia -->
+        <div class="card">
+          <div class="card-header">
+            <h3>MONGOLIA</h3>
+          </div>
+          <div class="badge"><i class="fas fa-briefcase"></i> Work Visa</div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> কাজের সুযোগ — বিভিন্ন সেক্টরে</li>
+            <li><i class="fas fa-check-circle"></i> ডকুমেন্ট প্রসেসিং সাপোর্ট</li>
+            <li><i class="fas fa-check-circle"></i> অভিজ্ঞতা থাকলে অগ্রাধিকার</li>
+          </ul>
+          <div class="cost-box"><i class="fas fa-tag"></i> Cost: ৭.৫ লাখ টাকা</div>
+          <div class="advance-box"><i class="fas fa-hand-holding-usd"></i> Advance: ২ লাখ টাকা</div>
+          <div class="service-note-small"><i class="fas fa-shield-check"></i> সার্ভিস চার্জ: ১ লাখ (ভিসা পাওয়ার পর)</div>
+        </div>
+
+        <!-- Fiji -->
+        <div class="card">
+          <div class="card-header">
+            <h3>FIJI</h3>
+          </div>
+          <div class="badge"><i class="fas fa-briefcase"></i> Work Visa</div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> কাজের সুযোগ — বিভিন্ন সেক্টরে</li>
+            <li><i class="fas fa-check-circle"></i> ডকুমেন্ট প্রসেসিং সাপোর্ট</li>
+            <li><i class="fas fa-check-circle"></i> Travel সাপোর্ট</li>
+          </ul>
+          <div class="cost-box"><i class="fas fa-tag"></i> Cost: ৭.৫ লাখ টাকা</div>
+          <div class="advance-box"><i class="fas fa-hand-holding-usd"></i> Advance: ২ লাখ টাকা</div>
+          <div class="service-note-small"><i class="fas fa-shield-check"></i> সার্ভিস চার্জ: ১ লাখ (ভিসা পাওয়ার পর)</div>
+        </div>
+
+        <!-- Brunei -->
+        <div class="card">
+          <div class="card-header">
+            <h3>BRUNEI</h3>
+          </div>
+          <div class="badge"><i class="fas fa-briefcase"></i> Work Visa</div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> কাজের সুযোগ — বিভিন্ন সেক্টরে</li>
+            <li><i class="fas fa-check-circle"></i> ডকুমেন্ট প্রসেসিং সাপোর্ট</li>
+            <li><i class="fas fa-check-circle"></i> দক্ষ ও আধা-দক্ষ উভয়ের জন্য</li>
+          </ul>
+          <div class="cost-box"><i class="fas fa-tag"></i> Cost: ৭.৫ লাখ টাকা</div>
+          <div class="advance-box"><i class="fas fa-hand-holding-usd"></i> Advance: ২ লাখ টাকা</div>
+          <div class="service-note-small"><i class="fas fa-shield-check"></i> সার্ভিস চার্জ: ১ লাখ (ভিসা পাওয়ার পর)</div>
+        </div>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="sub-section-label">
+        <span>অন্যান্য ট্রাভেল সার্ভিস</span>
+      </div>
+
+      <!-- Extra Services -->
+      <div class="extra-services-grid">
+
+        <div class="extra-card">
+          <div class="extra-icon visa"><i class="fas fa-passport"></i></div>
+          <h4>ট্যুরিস্ট ভিসা</h4>
+          <p>সব ধরনের ট্যুরিস্ট ভিসার জন্য সম্পূর্ণ সাপোর্ট ও ডকুমেন্ট গাইডলাইন।</p>
+          <div class="extra-status available">
+            <i class="fas fa-check-circle"></i> Available
+          </div>
+        </div>
+
+        <div class="extra-card">
+          <div class="extra-icon hotel"><i class="fas fa-hotel"></i></div>
+          <h4>হোটেল বুকিং</h4>
+          <p>দেশ-বিদেশের যেকোনো হোটেল বুকিং — সেরা দামে, নিরাপদে।</p>
+          <div class="extra-status available">
+            <i class="fas fa-check-circle"></i> Available
+          </div>
+        </div>
+
+        <!-- এখানে এয়ার টিকেট কার্ডটি "Coming Soon" করা হয়েছে -->
+        <div class="extra-card">
+          <div class="extra-icon air"><i class="fas fa-plane-departure"></i></div>
+          <h4>এয়ার টিকেট</h4>
+          <p>ডোমেস্টিক এবং ইন্টারন্যাশনাল — যেকোনো এয়ারলাইন্সের টিকেট।</p>
+          <div class="extra-status soon">
+            <i class="fas fa-clock"></i> Coming Soon
+          </div>
+        </div>
+
+        <div class="extra-card">
+          <div class="extra-icon tour"><i class="fas fa-suitcase-rolling"></i></div>
+          <h4>ট্যুর প্যাকেজ</h4>
+          <p>দেশ-বিদেশের সেরা ট্যুর প্যাকেজ — শীঘ্রই আসছে।</p>
+          <div class="extra-status soon">
+            <i class="fas fa-clock"></i> Coming Soon
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ৩. SERVICE CHARGE — কত টাকা
+  ============================================================ -->
+  <section class="service-charge-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-hand-holding-dollar"></i> আমার সার্ভিস চার্জ</h2>
+      <p class="section-subtitle">স্বচ্ছ, সৎ এবং নিরাপদ — ভিসা পাওয়ার পর পরিশোধ</p>
+
+      <!-- Main Charge Box -->
+      <div class="service-charge-box">
+        <div class="sc-icon">
+          <i class="fas fa-shield-halved"></i>
+        </div>
+        <div>
+          <div class="sc-amount">
+            <span class="sc-label">সার্ভিস চার্জ</span>
+            <span class="sc-value">১ লাখ টাকা</span>
+          </div>
+          <p class="sc-desc">
+            <strong>ভিসা পাওয়ার পর</strong> এই চার্জ পরিশোধ করবেন। আগে নয়, পরে। কারণ আপনার বিশ্বাসই আমার সবচেয়ে বড় সম্পদ।
+          </p>
+          <div class="sc-points">
+            <span><i class="fas fa-check-circle"></i> ভিসা পাওয়ার পর পেমেন্ট</span>
+            <span><i class="fas fa-check-circle"></i> কোনো লুকানো চার্জ নেই</span>
+            <span><i class="fas fa-check-circle"></i> সম্পূর্ণ সৎ ও স্বচ্ছ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Bargain Box -->
+      <div class="nobargain-box">
+        <div class="nobargain-header">
+          <div class="nobargain-icon">
+            <i class="fas fa-handshake-slash"></i>
+          </div>
+          <h3>আমার সার্ভিস চার্জে দরদাম নেই — কেন?</h3>
+        </div>
+
+        <p class="nobargain-text">
+          অনেকে দরদাম করতে চান — এটা স্বাভাবিক। কিন্তু আমার কাছে <strong>সার্ভিস চার্জ ১ লাখ টাকা ফিক্সড</strong>। এর কারণ আছে, আর সেই কারণটাই আমার সততার পরিচয়।
+        </p>
+
+        <div class="nobargain-reasons">
+          <div class="nobargain-reason">
+            <i class="fas fa-shield-halved"></i>
+            <span>
+              <strong>সব ক্লায়েন্টের জন্য সমান দাম</strong>
+              যে আগে আসে, যে পরে আসে — সবার জন্য একই ১ লাখ টাকা। পক্ষপাত নেই।
+            </span>
+          </div>
+
+          <div class="nobargain-reason">
+            <i class="fas fa-eye-slash"></i>
+            <span>
+              <strong>কোনো লুকানো চার্জ নেই</strong>
+              দরদাম করে কমালে পরে অন্য জায়গায় চার্জ বসাতে হতো। আমি সেটা করি না।
+            </span>
+          </div>
+
+          <div class="nobargain-reason">
+            <i class="fas fa-award"></i>
+            <span>
+              <strong>সার্ভিসের মান একই থাকে</strong>
+              কম দামে কম সার্ভিস — এই নীতি আমার না। সবাই পূর্ণ সার্ভিস পায়।
+            </span>
+          </div>
+
+          <div class="nobargain-reason">
+            <i class="fas fa-hand-holding-dollar"></i>
+            <span>
+              <strong>ভিসা পাওয়ার পর পেমেন্ট</strong>
+              দরদামের দরকারই নেই — কারণ ঝুঁকি শূন্য। আগে ভিসা, পরে টাকা।
+            </span>
+          </div>
+        </div>
+
+        <div class="nobargain-quote">
+          <i class="fas fa-quote-left"></i>
+          এক দাম, এক সার্ভিস, এক কথা — এটাই আমার নীতি। যে ১ লাখ টাকা দিয়ে ভিসা পায়, সে আর ৯০ হাজার দিয়ে নেয় না — কারণ সেবার মান বদলায় না।
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ৪. ABOUT — কেন আমি
+  ============================================================ -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-user"></i> আমার সম্পর্কে</h2>
+      <p class="section-subtitle">আমি কে এবং কেন আমার উপর ভরসা করতে পারবেন</p>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            নমস্কার। আমি <strong>অং চিং</strong>। গত <strong>৪ মাস যাবত এই টপিক নিয়ে কাজ করছি</strong> — বিদেশে কাজ, পড়াশোনা এবং ট্রাভেল সার্ভিসের জন্য সঠিক তথ্য, পরামর্শ ও গাইডলাইন দিয়ে আসছি।
+          </p>
+          <p>
+            আমি কোনো এজেন্সির প্রতিনিধি নই — <strong>আমি নিজেই একজন ব্যক্তি</strong>, যিনি নিজে এই বিষয়ে কাজ করছেন এবং অন্যদের সঠিকভাবে গাইড করছেন। আমার কাছে সবচেয়ে গুরুত্বপূর্ণ হলো — <strong>সততা ও জবাবদিহিতা</strong>।
+          </p>
+          <p>
+            আমার লক্ষ্য একটাই — <strong>সঠিক তথ্য দিয়ে আপনাকে ভুল সিদ্ধান্ত থেকে বাঁচানো</strong> এবং একটি নিরাপদ প্রসেসে বিদেশে পৌঁছে দেওয়া।
+          </p>
+
+          <div class="about-highlight">
+            <p>"আমি আপনাকে প্রতারণা করব না। যা জানি, সেটাই বলব — আর সৎ পরামর্শই আমার সবচেয়ে বড় সেবা।"</p>
+          </div>
+        </div>
+
+        <div class="about-points">
+          <h4>কেন আমার উপর ভরসা করবেন?</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> ব্যক্তিগতভাবে সব প্রসেস দেখাশোনা করি</li>
+            <li><i class="fas fa-check-circle"></i> <strong>সার্ভিস চার্জ ১ লাখ — ভিসা পাওয়ার পর</strong></li>
+            <li><i class="fas fa-check-circle"></i> <strong>দরদাম নেই — সবার জন্য সমান দাম</strong></li>
+            <li><i class="fas fa-check-circle"></i> সব খরচ আগে থেকেই স্পষ্ট বলি</li>
+            <li><i class="fas fa-check-circle"></i> সব ওয়ার্কিং প্রসেস ১০০% অথেনটিক</li>
+            <li><i class="fas fa-check-circle"></i> ভুয়া রিভিউ দেখাই না</li>
+            <li><i class="fas fa-check-circle"></i> ভিসা থেকে ট্রাভেল — সব এক জায়গায়</li>
+            <li><i class="fas fa-check-circle"></i> সরাসরি যোগাযোগের সুযোগ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ৫. PROCESS STEPS — কীভাবে কাজ করি
+  ============================================================ -->
+  <section class="process-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-route"></i> আমার কাজের ধাপ</h2>
+      <p class="section-subtitle">সহজ ৫ ধাপে আমরা একসাথে এগিয়ে যাব</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">১</div>
+          <h4>যোগাযোগ</h4>
+          <p>WhatsApp-এ মেসেজ দিন</p>
+        </div>
+        <div class="step">
+          <div class="step-num">২</div>
+          <h4>কথা বলি</h4>
+          <p>আপনার পরিস্থিতি বুঝি</p>
+        </div>
+        <div class="step">
+          <div class="step-num">৩</div>
+          <h4>ডকুমেন্ট</h4>
+          <p>প্রয়োজনীয় কাগজ গোছাই</p>
+        </div>
+        <div class="step">
+          <div class="step-num">৪</div>
+          <h4>আবেদন</h4>
+          <p>ভিসা প্রসেস শুরু করি</p>
+        </div>
+        <div class="step">
+          <div class="step-num">৫</div>
+          <h4>সাপোর্ট</h4>
+          <p>বিদেশ যাওয়ার পরেও পাশে থাকি</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ৬. WORK PROCESS — অথেনটিক প্রমাণ
+  ============================================================ -->
+  <section class="work-process-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-check-shield"></i> আমার ওয়ার্কিং প্রসেস — সব অথেনটিক</h2>
+      <p class="section-subtitle">প্রতিটি ধাপে আমি নিজে উপস্থিত — কোনো তৃতীয় পক্ষ নেই</p>
+
+      <div class="work-process-grid">
+
+        <div class="wp-card">
+          <div class="wp-step-badge"><i class="fas fa-check-circle"></i> অথেনটিক</div>
+          <h4><i class="fas fa-comments"></i> প্রাথমিক যোগাযোগ</h4>
+          <p>আপনি মেসেজ দিলে সরাসরি আমি নিজেই উত্তর দিই। কোনো বট বা অটো-রিপ্লাই নেই।</p>
+          <div class="wp-channel-tag"><span class="dot"></span> WhatsApp — সরাসরি</div>
+        </div>
+
+        <div class="wp-card">
+          <div class="wp-step-badge"><i class="fas fa-check-circle"></i> অথেনটিক</div>
+          <h4><i class="fas fa-phone-volume"></i> বিস্তারিত আলোচনা</h4>
+          <p>Voice/Video কলে আপনার পুরো পরিস্থিতি বুঝে নিই এবং সঠিক পরামর্শ দিই।</p>
+          <div class="wp-channel-tag"><span class="dot"></span> WhatsApp Call</div>
+        </div>
+
+        <div class="wp-card">
+          <div class="wp-step-badge"><i class="fas fa-check-circle"></i> অথেনটিক</div>
+          <h4><i class="fas fa-file-arrow-up"></i> ডকুমেন্ট সংগ্রহ</h4>
+          <p>প্রয়োজনীয় সব ডকুমেন্ট যাচাই ও সংগ্রহ করি — সবকিছু স্পষ্টভাবে জানিয়ে।</p>
+          <div class="wp-channel-tag"><span class="dot"></span> WhatsApp / Email</div>
+        </div>
+
+        <div class="wp-card">
+          <div class="wp-step-badge"><i class="fas fa-check-circle"></i> অথেনটিক</div>
+          <h4><i class="fas fa-list-check"></i> প্রসেস ট্র্যাকিং</h4>
+          <p>প্রতিটি ধাপের আপডেট নিয়মিত জানাই। কোথায় আছে, কী হচ্ছে — সব পরিষ্কার।</p>
+          <div class="wp-channel-tag"><span class="dot all"></span> সব চ্যানেলে আপডেট</div>
+        </div>
+
+        <div class="wp-card">
+          <div class="wp-step-badge"><i class="fas fa-check-circle"></i> অথেনটিক</div>
+          <h4><i class="fas fa-plane-departure"></i> Travel প্রস্তুতি</h4>
+          <p>ভিসা পাওয়ার পর Travel প্রস্তুতি, টিকেট, ব্যাগ গোছানো — সবকিছুতে গাইড করি।</p>
+          <div class="wp-channel-tag"><span class="dot"></span> WhatsApp — ২৪/৭</div>
+        </div>
+
+        <div class="wp-card">
+          <div class="wp-step-badge"><i class="fas fa-check-circle"></i> অথেনটিক</div>
+          <h4><i class="fas fa-headset"></i> বিদেশে সাপোর্ট</h4>
+          <p>বিদেশে পৌঁছানোর পরেও যোগাযোগ রাখি — যেকোনো সমস্যায় পাশে আছি।</p>
+          <div class="wp-channel-tag"><span class="dot all"></span> সব চ্যানেলে সাপোর্ট</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ৭. REVIEWS — ক্লায়েন্টদের মত
+  ============================================================ -->
+  <section class="testimonial-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-users"></i> ক্লায়েন্টদের কথা</h2>
+      <p class="section-subtitle">যারা আমার সাথে কাজ করেছেন তাদের অভিজ্ঞতা</p>
+
+      <div class="testimonial-grid" id="realReviews" style="display: none;">
+        <!--
+        ⚠️ ভবিষ্যতে আসল ক্লায়েন্টের রিভিউ এখানে যোগ করবেন।
+
+        <div class="testimonial verified">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"ক্লায়েন্টের আসল রিভিউ এখানে লিখুন।"</p>
+          <div class="testimonial-author">
+            <div class="avatar">রা</div>
+            <div class="author-info">
+              <strong>ক্লায়েন্টের নাম</strong>
+              <small>Japan Work Visa — ২০২৫</small>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+
+      <div class="review-coming-soon" id="comingSoonBox">
+        <div class="rcs-icon">
+          <i class="fas fa-comment-dots"></i>
+        </div>
+        <h3>রিভিউ Coming Soon</h3>
+        <p>
+          আমি সবে <strong>৪ মাস যাবত এই টপিক নিয়ে কাজ করছি</strong>। এখনো কোনো ক্লায়েন্টের কাছ থেকে <strong>অফিসিয়াল রিভিউ</strong> সংগ্রহ করিনি — কারণ আমি <strong>ভুয়া রিভিউ দেখাতে চাই না</strong>।
+          <br><br>
+          আপনি যদি আমার সাথে কাজ করে থাকেন — আপনার সৎ মতামত জানান। এখানে যোগ করব।
+        </p>
+        <a href="https://wa.me/8801918481232?text=নমস্কার%20অং%20চিং%20দা%2C%20আমি%20আপনার%20সাথে%20কাজ%20করেছি%20এবং%20রিভিউ%20দিতে%20চাই" class="btn-give-review" target="_blank" rel="noopener">
+          <i class="fas fa-star"></i> রিভিউ দিন
+        </a>
+        <p class="rcs-note">
+          <i class="fas fa-info-circle"></i> প্রতিটি রিভিউ যাচাই করে যোগ করা হবে
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ৮. FAQ — সন্দেহ দূর
+  ============================================================ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-question-circle"></i> সচরাচর জিজ্ঞাসা</h2>
+      <p class="section-subtitle">আপনার প্রশ্নের উত্তর এখানে খুঁজুন</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">আপনার সার্ভিস চার্জ কত? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">আমার সার্ভিস চার্জ মাত্র <strong>১ লাখ টাকা</strong> — এবং <strong>ভিসা পাওয়ার পর</strong> পরিশোধ করবেন। আগে নয়, পরে।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">সার্ভিস চার্জে দরদাম করা যাবে? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">
+            না, দুঃখিত। আমার সার্ভিস চার্জ <strong>১ লাখ টাকা ফিক্সড</strong> — কোনো দরদাম নেই। এর পিছনে কারণ হলো:
+            <br><br>
+            <strong>১.</strong> সব ক্লায়েন্টের জন্য সমান দাম — পক্ষপাত নয়। <br>
+            <strong>২.</strong> দরদাম করলে পরে লুকানো চার্জ আসে — যা আমি কখনো করি না। <br>
+            <strong>৩.</strong> সার্ভিসের মান সবার জন্য এক — কম দামে কম সেবা নয়। <br>
+            <strong>৪.</strong> <strong>ভিসা পাওয়ার পর পেমেন্ট</strong> — তাই ঝুঁকি নেই, দরদামের দরকারও নেই।
+            <br><br>
+            আপনি চাইলে অন্য কারো কাছে যেতে পারেন — কিন্তু আমি আপনাকে <strong>সৎ দাম, সৎ সেবা</strong> দেব। এটাই আমার প্রতিশ্রুতি।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">আপনার কাছ থেকে কী কী ট্রাভেল সার্ভিস পাওয়া যাবে? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">আমার কাছ থেকে পাবেন — <strong>সব ধরনের ট্যুরিস্ট ভিসা</strong>, <strong>হোটেল বুকিং</strong>, এবং <strong>ডোমেস্টিক ও ইন্টারন্যাশনাল এয়ার টিকেট</strong>। এছাড়া <strong>ট্যুর প্যাকেজ</strong> শীঘ্রই আসছে।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">ট্যুর প্যাকেজ কখন পাওয়া যাবে? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">ট্যুর প্যাকেজ <strong>Coming Soon</strong> — শীঘ্রই চালু হবে। আপডেট পেতে WhatsApp-এ যোগাযোগ করুন।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">সার্ভিস চার্জ কি ভিসা ফি-র সাথে আলাদা? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">হ্যাঁ। <strong>সার্ভিস চার্জ ১ লাখ টাকা</strong> সম্পূর্ণ আলাদা — শুধু আমার পরামর্শ, গাইডলাইন ও প্রসেস দেখাশোনার জন্য। ভিসা ফি, ডকুমেন্ট ফি, এমব্যাসি ফি আলাদা।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">আপনার ওয়ার্কিং প্রসেস কি অথেনটিক? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">হ্যাঁ। আমার সম্পূর্ণ ওয়ার্কিং প্রসেস <strong>১০০% অথেনটিক</strong> — প্রথম যোগাযোগ থেকে বিদেশে পৌঁছানোর পরের সাপোর্ট পর্যন্ত প্রতিটি ধাপে আমি নিজেই উপস্থিত থাকি।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">আপনার কাছে কি ক্লায়েন্টের রিভিউ আছে? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">এখনো <strong>অফিসিয়াল রিভিউ সংগ্রহ করিনি</strong> — কারণ আমি <strong>ভুয়া রিভিউ দেখাতে চাই না</strong>। আসল রিভিউ এলে যাচাই করে এই পেজে যোগ করব।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Japan Work Visa-এর খরচ কত? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Japan Work Visa-এর মোট খরচ প্রায় <strong>৫–৬ লাখ টাকা</strong>। <strong>ইন্টারভিউ পাস করার পর পেমেন্ট</strong> — কোনো অ্যাডভান্স লাগে না।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Italy ভিসার খরচ কত? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Italy Sponsor Visa-এর মোট খরচ প্রায় <strong>২৬ লাখ টাকা</strong>। প্রসেস শুরুর সময় <strong>অ্যাডভান্স ২ লাখ টাকা</strong>।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Mongolia / Fiji / Brunei-এর খরচ কত? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Mongolia, Fiji, Brunei-এর মোট খরচ প্রায় <strong>৭.৫ লাখ টাকা</strong>। প্রসেস শুরুর সময় <strong>অ্যাডভান্স ২ লাখ টাকা</strong>।</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">আপনি কি ভিসার গ্যারান্টি দেন? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">না। ভিসা অনুমোদন সম্পূর্ণভাবে সংশ্লিষ্ট দূতাবাস ও নিয়োগকর্তার সিদ্ধান্তের উপর নির্ভরশীল। তবে আমি সর্বোচ্চ সাপোর্ট ও সঠিক গাইডলাইন দিই।</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ৯. LEAD FORM — যোগাযোগ
+  ============================================================ -->
+  <section class="form-section" id="form">
+    <div class="form-card">
+      <h3><i class="fas fa-paper-plane"></i> সরাসরি আমার সাথে কথা বলুন</h3>
+      <p class="form-sub">নিচের ফর্মটি পূরণ করুন — আমি নিজেই যোগাযোগ করব</p>
+
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="name">আপনার নাম *</label>
+          <input type="text" id="name" name="name" placeholder="পূর্ণ নাম লিখুন" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">মোবাইল নম্বর *</label>
+          <input type="tel" id="phone" name="phone" placeholder="০১XXXXXXXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service">কী সার্ভিস দরকার? *</label>
+          <select id="service" name="service" required>
+            <option value="">-- নির্বাচন করুন --</option>
+            <option value="Italy Visa">Italy — Sponsor Visa (২৬ লাখ, Advance ২ লাখ)</option>
+            <option value="Japan Work Visa">Japan — Work Visa (৫–৬ লাখ, Advance নেই)</option>
+            <option value="Japan Student Visa">Japan — Student Visa</option>
+            <option value="Mongolia Visa">Mongolia — Work Visa (৭.৫ লাখ, Advance ২ লাখ)</option>
+            <option value="Fiji Visa">Fiji — Work Visa (৭.৫ লাখ, Advance ২ লাখ)</option>
+            <option value="Brunei Visa">Brunei — Work Visa (৭.৫ লাখ, Advance ২ লাখ)</option>
+            <option value="Tourist Visa">ট্যুরিস্ট ভিসা</option>
+            <option value="Hotel Booking">হোটেল বুকিং</option>
+            <option value="Air Ticket">এয়ার টিকেট (Coming Soon)</option>
+            <option value="Tour Package">ট্যুর প্যাকেজ (Coming Soon)</option>
+            <option value="Other">অন্যান্য</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">আপনার পরিস্থিতি বা প্রশ্ন (ঐচ্ছিক)</label>
+          <textarea id="message" name="message" rows="3" placeholder="যেমন: আমি SSC পাস, ৩ বছর কাজের অভিজ্ঞতা আছে..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">
+          <i class="fab fa-whatsapp"></i> অং চিং-এর সাথে WhatsApp-এ যোগাযোগ করুন
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ১০. DISCLAIMER
+  ============================================================ -->
+  <section class="disclaimer-wrapper">
+    <div class="container">
+      <div class="disclaimer">
+        <i class="fas fa-exclamation-triangle"></i>
+        <strong>নোট:</strong> ভিসা অনুমোদন, চাকরি, প্রসেসিং সময় ও Travel Date সংশ্লিষ্ট কর্তৃপক্ষ/নিয়োগকর্তার সিদ্ধান্ত ও প্রয়োজনীয় কাগজপত্রের ওপর নির্ভরশীল। <strong>অর্থ প্রদানের আগে অবশ্যই সব তথ্য ও ডকুমেন্ট যাচাই করুন।</strong> কোনো ভিসার গ্যারান্টি দেওয়া হয় না।
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-contact">
+      <i class="fab fa-whatsapp"></i> WhatsApp-এ যোগাযোগ করুন
+    </div>
+    <p>© ২০২৫ — অং চিং | ব্যক্তিগত ভিসা ও ট্রাভেল সার্ভিস</p>
+  </footer>
+
+  <!-- ============================================================
+       FLOATING WHATSAPP
+  ============================================================ -->
+  <a href="https://wa.me/8801918481232?text=নমস্কার%20অং%20চিং%20দা%2C%20আমার%20সার্ভিস%20দরকার" class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ============================================================
+       TOAST
+  ============================================================ -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i> <span id="toastMsg">ধন্যবাদ! WhatsApp খোলা হচ্ছে...</span>
+  </div>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !phone || !service) {
+        showToast('অনুগ্রহ করে সব * চিহ্নিত ঘর পূরণ করুন', '#e67e22');
+        return;
+      }
+
+      let text = `*নমস্কার অং চিং দা, সার্ভিস ইনকোয়ারি*%0A%0A`;
+      text += `*নাম:* ${encodeURIComponent(name)}%0A`;
+      text += `*ফোন:* ${encodeURIComponent(phone)}%0A`;
+      text += `*সার্ভিস:* ${encodeURIComponent(service)}%0A`;
+      if (message) text += `*বার্তা:* ${encodeURIComponent(message)}%0A`;
+      text += `%0Aআপনার ল্যান্ডিং পেজ থেকে পাঠানো`;
+
+      showToast('ধন্যবাদ! WhatsApp খোলা হচ্ছে...', '#25D366');
+
+      setTimeout(() => {
+        window.open(`https://wa.me/8801918481232?text=${text}`, '_blank');
+      }, 800);
+    });
+
+    function showToast(msg, color = '#25D366') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = msg;
+      toast.style.background = color;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    (function() {
+      const realReviews = document.getElementById('realReviews');
+      const comingSoon = document.getElementById('comingSoonBox');
+      if (realReviews && realReviews.children.length > 0) {
+        realReviews.style.display = 'grid';
+        comingSoon.style.display = 'none';
+      }
+    })();
+  </script>
+
+</body>
+</html>
